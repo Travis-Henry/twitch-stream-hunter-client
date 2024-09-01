@@ -14,6 +14,14 @@ function App() {
     "Call of Duty",
     "Minecraft",
     "Forza",
+    "Roblox",
+    "Elden Ring",
+    "Fortnite",
+    "Valorant",
+    "Rocket League",
+    "Destiny 2",
+    "Overwatch",
+    "League of Legends",
   ];
 
   return (
@@ -22,20 +30,16 @@ function App() {
       <div className="wrapper1 debug">
         <SideMenu />
         <div className="wrapper2">
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
+          <h3>Search Bar</h3>
+          <div className="cardWrapper">
+            {games.map((game) => (
+              <Card name={game} />
+            ))}
+          </div>
 
-          {games.map((game) => (
-            <Card name={game} />
-          ))}
-
-          <button onClick={() => setCount((count) => count + 1)}>
+          {/* <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
-          </button>
+          </button> */}
         </div>
       </div>
     </>
